@@ -1,0 +1,67 @@
+From 9f0f20d2bf045eeb31744bdd0d08c1e6fbe3efd2 Mon Sep 17 00:00:00 2001
+From: Alex Samorukov <samm@os2.kiev.ua>
+Date: Wed, 8 Jan 2020 01:24:32 +0100
+Subject: [PATCH 1/2] Fix for the gdk pixbuf loader
+
+1. If new size was requested and image was scaled - redefine width/height to the new values
+2. Do not duplicate `heif_image_get_width` for now reason
+3. Send image width/height to the size_func call as other pixbuf loaders doing.
+
+This fixing `gdk_pixbuf_new_from_file_at_size` for me.
+---
+ gdk-pixbuf/pixbufloader-heif.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/gdk-pixbuf/pixbufloader-heif.c b/gdk-pixbuf/pixbufloader-heif.c
+index 5fa682ec..012f8cd5 100644
+--- a/gdk-pixbuf/pixbufloader-heif.c
++++ b/gdk-pixbuf/pixbufloader-heif.c
+@@ -99,19 +99,19 @@ static gboolean stop_load(gpointer context, GError** error)
+ 
+   width = heif_image_get_width(img, heif_channel_interleaved);
+   height = heif_image_get_height(img, heif_channel_interleaved);
+-  requested_width = 0;
+-  requested_height = 0;
++  requested_width = width;
++  requested_height = height;
++
+   if (hpc->size_func) {
+     (*hpc->size_func)(&requested_width, &requested_height, hpc->user_data);
+   }
+ 
+-  if (requested_width == 0 || requested_height == 0) {
+-    width = heif_image_get_width(img, heif_channel_interleaved);
+-    height = heif_image_get_height(img, heif_channel_interleaved);
+-  } else {
++  if (requested_width && requested_height) {
+     struct heif_image* resized;
+     heif_image_scale_image(img, &resized, requested_width, requested_height, NULL);
+     heif_image_release(img);
++    width = requested_width;
++    height = requested_height;
+     img = resized;
+   }
+ 
+
+From 6c039aec0560ccb9c5a1f10ad316adfef1aae751 Mon Sep 17 00:00:00 2001
+From: Alex Samorukov <samm@os2.kiev.ua>
+Date: Wed, 8 Jan 2020 15:00:25 +0100
+Subject: [PATCH 2/2] check if widht/height are positive values
+
+---
+ gdk-pixbuf/pixbufloader-heif.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gdk-pixbuf/pixbufloader-heif.c b/gdk-pixbuf/pixbufloader-heif.c
+index 012f8cd5..1fc09325 100644
+--- a/gdk-pixbuf/pixbufloader-heif.c
++++ b/gdk-pixbuf/pixbufloader-heif.c
+@@ -106,7 +106,7 @@ static gboolean stop_load(gpointer context, GError** error)
+     (*hpc->size_func)(&requested_width, &requested_height, hpc->user_data);
+   }
+ 
+-  if (requested_width && requested_height) {
++  if (requested_width > 0 && requested_height > 0) {
+     struct heif_image* resized;
+     heif_image_scale_image(img, &resized, requested_width, requested_height, NULL);
+     heif_image_release(img);
