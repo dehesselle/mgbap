@@ -63,28 +63,43 @@
       <dep package="openexr"/>
       <dep package="libmng"/>
       <dep package="ghostscript"/>
-    </dependencies>
-  </metamodule>
-
-  <autotools id="gimp299" autogen-sh="autogen.sh" autogenargs="--without-x --with-build-id=org.gimp.GIMP_official --with-revision=0">
-    <branch module="gimp/v2.99/gimp-2.99.8.tar.bz2"
-      version="2.99.8"
-      hash="sha256:dd916bd3474ef2efc652a0510280977ab8ea95e3d95d918394b0662261c32aae"
-      repo="ftp.gimp.org">
-      <patch file="gimp-2.99.8-gsettings.patch" strip="1"/>
-    </branch>
-    <after>
-      <dep package="meta-gtk-osx-bootstrap"/>
-      <dep package="meta-gtk-osx-gtk3"/>
-      <dep package="webkit"/>
-    </after>
-    <dependencies>
-      <dep package="gimp-common-deps"/>
-      <dep package="python3"/>
       <dep package="meta-gtk-osx-python3"/>
       <dep package="appstream-glib"/>
     </dependencies>
+  </metamodule>
+
+  <autotools
+    id="gimp"
+    autogen-sh="autogen.sh"
+    autogenargs="--without-x">
+    <branch
+      module="gimp/v2.99/gimp-2.99.8.tar.bz2"
+      version="2.99.8"
+      hash="sha256:dd916bd3474ef2efc652a0510280977ab8ea95e3d95d918394b0662261c32aae"
+      repo="ftp.gimp.org">
+      <patch
+        file="gimp-2.99.8-gsettings.patch" strip="1"/>
+    </branch>
+    <dependencies>
+      <dep package="gimp-common-deps"/>
+    </dependencies>
   </autotools>
+
+  <metamodule
+    id="meta-webkit-dependencies">
+    <dependencies>
+      <dep package="enchant"/>
+      <dep package="libpsl"/>
+      <dep package="sqlite"/>
+      <dep package="vala"/>
+      <dep package="gnutls"/>
+      <dep package="libgpg-error"/>
+      <dep package="glib-networking"/>
+      <dep package="libsoup"/>
+      <dep package="libgcrypt"/>
+      <dep package="libwebp"/>
+    </dependencies>
+  </metamodule>
 
   <autotools id="p2tc" supports-non-srcdir-builds="no" autogen-sh="autogen.sh">
     <branch module="poly2tri-c" tag="p2tc-0.1" repo="git-jtojnar" checkoutdir="poly2tri-c-p2tc-0.1.0">

@@ -33,6 +33,6 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-#----------------------------------------------------
+#----------------------------------------------------- create application bundle
 
-jhbuild build --check babl gegl
+jhbuild build gtkmacbundler

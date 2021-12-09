@@ -34,5 +34,11 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
+#------------------------------------------------------ 
+
 jhbuild build \
-  icu libnsgif meta-gtk-osx-freetype meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
+  icu \
+  libnsgif \
+  meta-gtk-osx-freetype \
+  meta-gtk-osx-bootstrap \
+  meta-gtk-osx-gtk3

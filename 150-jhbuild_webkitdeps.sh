@@ -6,8 +6,7 @@
 
 ### description ################################################################
 
-# Install remaining Inkscape dependencies, i.e. everything besides the GTK3
-# stack.
+# TODO:
 
 ### shellcheck #################################################################
 
@@ -34,10 +33,6 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-#------------------------------------------------------ dependencies besides GTK
+#------------------------------------------------------ 
 
-jhbuild build \
-  enchant libpsl sqlite vala gnutls libgpg-error glib-networking
-
-jhbuild buildone \
-  libsoup libgcrypt libwebp
+jhbuild build meta-webkit-dependencies

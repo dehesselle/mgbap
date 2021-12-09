@@ -6,7 +6,8 @@
 
 ### description ################################################################
 
-# TODO:
+# Build and install Inkscape. For non-CI builds, this will build Inkscape
+# master branch. Installation prefix is VER_DIR.
 
 ### shellcheck #################################################################
 
@@ -29,10 +30,22 @@ done
 
 ### main #######################################################################
 
-if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
-  error_trace_enable
-fi
+error_trace_enable
 
-#----------------------------------------------------
+#-------------------------------------------------------- (re-) configure ccache
 
-jhbuild build --check babl gegl
+# This is required when using the precompiled toolset as ccache will not have
+# been setup before (it happens in 110-sysprep.sh).
+
+ccache_configure
+
+#------------------------------------------------------- (re-) configure JHBuild
+
+# This allows compiling Inkscape with a different setup than what the toolset
+# was built with, most importantly a different SDK.
+
+jhbuild_configure
+
+#-------------------------------------------------------------------- build GIMP
+
+jhbuild build gimp

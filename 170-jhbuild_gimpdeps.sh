@@ -6,8 +6,7 @@
 
 ### description ################################################################
 
-# Install additional tools that are no direct dependencies of Inkscape but that
-# we need for e.g. packaging the application.
+# TODO: 
 
 ### shellcheck #################################################################
 
@@ -34,8 +33,6 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-#---------------------------------------------------- 
+#------------------------------------------------------- build GIMP dependencies
 
-jhbuild build gtkmacbundler
-
-jhbuild build gimp299
+jhbuild build gimp-common-deps

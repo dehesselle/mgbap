@@ -31,5 +31,7 @@ done
 
 error_trace_enable
 
+#----------------------------------------------------------------
+
 jhbuild_install
 jhbuild_configure
