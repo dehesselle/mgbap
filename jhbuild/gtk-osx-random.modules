@@ -89,34 +89,11 @@
     </dependencies>
   </meson>
 
-  <!-- gtksourceview got a major version ahead: 4.x.x supports recent versions of gtk+-3 and 5.x.x is for gtk4.
-  -->
-  <meson id="gtksourceview3" mesonargs="-Dvapi=false">
-    <branch module="gtksourceview/4.8/gtksourceview-4.8.1.tar.xz"
-            version="4.8.1"
-            hash="sha256:d163d71b5fcafbc5b1eec6dd841edbdbcddd3a7511cd5fdcffd86b8bbfe69ac1">
-    </branch>
-    <dependencies>
-      <dep package="gtk+-3.0"/>
-    </dependencies>
-  </meson>
-
   <autotools id="libpcre2" autogen-sh="configure">
     <branch repo="pcre" version="20.36"
             module="pcre/pcre2-10.36.tar.bz2"
             hash="sha256:a9ef39278113542968c7c73a31cfcb81aca1faa64690f400b907e8ab6b4a665c"/>
   </autotools>
-
-  <meson id="gtksourceview4">
-    <branch module="gtksourceview/5.0/gtksourceview-5.0.0.tar.xz"
-            version="5.0.0"
-            hash="sha256:64826633c0c8d2c6a6eb4ec653215ef04e31e13a2d4156a09ca5fd9013acd9c3">
-    </branch>
-    <dependencies>
-      <dep package="gtk-4"/>
-      <dep package="libpcre2"/>
-    </dependencies>
-  </meson>
 
   <autotools id="frodo-getopt" autogen-sh="configure"
              supports-non-srcdir-builds="no">
@@ -167,26 +144,6 @@
     <branch module="2021/sqlite-autoconf-3350400.tar.gz" version='3.35.4'
             repo="sqlite"
             hash="sha256:7771525dff0185bfe9638ccce23faa0e1451757ddbda5a6c853bb80b923a512d"/>
-  </autotools>
-
-<!-- Goocanvas2 is for gtk+-3. -->
-
-  <autotools id="goocanvas2" supports-non-srcdir-builds="no">
-    <branch module="goocanvas/2.0/goocanvas-2.0.4.tar.xz" version="2.0.4"
-	    hash="sha256:c728e2b7d4425ae81b54e1e07a3d3c8a4bd6377a63cffa43006045bceaa92e90"/>
-    <after>
-      <dep package="gtk+-3.0"/>
-    </after>
-  </autotools>
-
-<!-- Goocanvas3 is for gtk-4. -->
-
-  <autotools id="goocanvas3" supports-non-srcdir-builds="no">
-    <branch module="goocanvas/3.0/goocanvas-3.0.0.tar.xz" version="3.0.0"
-	    hash="sha256:670a7557fe185c2703a14a07506156eceb7cea3b4bf75076a573f34ac52b401a"/>
-    <after>
-      <dep package="gtk-4"/>
-    </after>
   </autotools>
 
   <autotools id="hunspell" autogen-sh="autoreconf">
