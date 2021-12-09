@@ -125,7 +125,7 @@
       checkoutdir="SuiteSparse"
       repo="github-tarball"
       hash="sha256:76d34d9f6dafc592b69af14f58c1dc59e24853dcd7c2e8f4c98ffa223f6a1adb">
-      <patch file="suitesparse.diff" strip="0"/>
+      <patch file="suitesparse.patch" strip="0"/>
     </branch>
   </autotools>
 
