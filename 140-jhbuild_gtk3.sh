@@ -6,8 +6,7 @@
 
 ### description ################################################################
 
-# Install GTK3 and its C++ bindings. Dependencies get pulled in and built
-# automatically by JHBuild.
+# Install GTK3.
 
 ### shellcheck #################################################################
 
@@ -34,7 +33,7 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-#------------------------------------------------------ 
+#-------------------------------------------------------------------------------
 
 jhbuild build \
   icu \

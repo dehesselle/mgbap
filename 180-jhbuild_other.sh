@@ -6,7 +6,8 @@
 
 ### description ################################################################
 
-# TODO:
+# Install tools that are not direct dependencies of GIMP but required for
+# e.g. packaging.
 
 ### shellcheck #################################################################
 

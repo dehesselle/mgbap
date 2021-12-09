@@ -6,8 +6,7 @@
 
 ### description ################################################################
 
-# Build and install Inkscape. For non-CI builds, this will build Inkscape
-# master branch. Installation prefix is VER_DIR.
+# Build and install GIMP.
 
 ### shellcheck #################################################################
 

@@ -6,7 +6,8 @@
 
 ### description ################################################################
 
-# TODO:
+# Install dependencies for Webkit. Not sure if this is required as we don't
+# install Webkit itself.
 
 ### shellcheck #################################################################
 
@@ -33,6 +34,6 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-#------------------------------------------------------ 
+#-------------------------------------------------------------------------------
 
 jhbuild build meta-webkit-dependencies
