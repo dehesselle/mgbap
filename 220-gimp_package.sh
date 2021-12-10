@@ -31,20 +31,6 @@ done
 
 error_trace_enable
 
-#-------------------------------------------------------- (re-) configure ccache
-
-# This is required when using the precompiled toolset as ccache will not have
-# been setup before (it happens in 110-sysprep.sh).
-
-ccache_configure
-
-#------------------------------------------------------- (re-) configure JHBuild
-
-# This allows compiling Inkscape with a different setup than what the toolset
-# was built with, most importantly a different SDK.
-
-jhbuild_configure
-
 #----------------------------------------------------- create application bundle
 
 # TODO: investigate why this is necessary
