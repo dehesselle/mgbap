@@ -218,7 +218,7 @@ function toolset_save_overlay
   umount /dev/"$overlay"
 
   mount -o nobrowse,ro -t hfs /dev/"$overlay" "$TMP_DIR"
-  tar -C "$TMP_DIR" --exclude "Inkscape.???" --exclude ".fseventsd" -cp . |
+  tar -C "$TMP_DIR" --exclude "GIMP.???" --exclude ".fseventsd" -cp . |
     XZ_OPT=-T0 xz > "$ARTIFACT_DIR"/toolset_overlay.tar.xz
 
   diskutil eject "$overlay"

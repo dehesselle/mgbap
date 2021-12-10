@@ -7,7 +7,7 @@
 ### description ################################################################
 
 # Create our JHBuild-based toolset with all dependencies to be able to
-# compile Inkscape.
+# compile GIMP.
 
 ### includes ###################################################################
 

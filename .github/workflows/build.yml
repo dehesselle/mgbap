@@ -154,17 +154,17 @@ jobs:
     - name: upload toolset disk image
       uses: actions/upload-artifact@v2
       with:
-        name: Inkscape_build_toolset
+        name: GIMP_build_toolset
         path: ${{ github.workspace }}/mgbap_v${{ steps.toolset.outputs.version }}.dmg
 
     - name: upload toolset checksum
       uses: actions/upload-artifact@v2
       with:
-        name: Inkscape_build_toolset.sha256
+        name: GIMP_build_toolset.sha256
         path: ${{ github.workspace }}/mgbap_v${{ steps.toolset.outputs.version }}.dmg.sha256
 
     #- name: upload GIMP disk image
     #  uses: actions/upload-artifact@v2
     #  with:
-    #    name: Inkscape_dmg
-    #    path: ${{ github.workspace }}/Inkscape.dmg
+    #    name: GIMP_dmg
+    #    path: ${{ github.workspace }}/GIMP.dmg

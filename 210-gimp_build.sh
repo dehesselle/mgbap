@@ -40,7 +40,7 @@ ccache_configure
 
 #------------------------------------------------------- (re-) configure JHBuild
 
-# This allows compiling Inkscape with a different setup than what the toolset
+# This allows compiling GIMP with a different setup than what the toolset
 # was built with, most importantly a different SDK.
 
 jhbuild_configure
