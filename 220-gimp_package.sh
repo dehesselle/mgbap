@@ -58,7 +58,7 @@ fi
 )
 
 /usr/libexec/PlistBuddy \
-  -c "Set CFBundleShortVersionString '$(gmp_get_version)'" \
+  -c "Set CFBundleShortVersionString '$(gimp_get_version)'" \
   "$GIMP_APP_CON_DIR"/Info.plist
 
 # TODO: needs to be auto-incremented build number
@@ -72,4 +72,3 @@ mv "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor/scalable \
    "$GIMP_APP_SHR_DIR"/icons/hicolor
 rm -rf "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor
 ln -s ../../../icons/hicolor "$GIMP_APP_SHR_DIR"/gimp/*/icons
-
