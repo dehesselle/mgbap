@@ -71,7 +71,7 @@
   <autotools
     id="gimp"
     autogen-sh="autogen.sh"
-    autogenargs="--without-x">
+    autogenargs="--without-x --with-build-id=dehesselle.GIMP">
     <branch
       module="gimp/v2.99/gimp-2.99.8.tar.bz2"
       version="2.99.8"
@@ -79,6 +79,8 @@
       repo="ftp.gimp.org">
       <patch
         file="gimp-2.99.8-gsettings.patch" strip="1"/>
+      <patch
+        file="gimp_settings_dir.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gimp-common-deps"/>

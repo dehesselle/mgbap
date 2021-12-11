@@ -825,7 +825,7 @@
     <key>CFBundleIconFile</key>
     <string>gimp.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>dehesselle.gimp</string>
+    <string>dehesselle.GIMP</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
