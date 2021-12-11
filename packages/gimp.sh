@@ -112,8 +112,6 @@ function gimp_pipinstall_pygobject
 function gimp_download_python
 {
   curl -o "$PKG_DIR"/"$(basename "${GIMP_PYTHON_URL%\?*}")" -L "$GIMP_PYTHON_URL"
-  curl -o "$PKG_DIR"/"$(basename "$GIMP_PYTHON_ICON_URL")" \
-    -L "$GIMP_PYTHON_ICON_URL"
 }
 
 function gimp_install_python
