@@ -43,6 +43,15 @@ fi
   jhbuild run gtk-mac-bundler gimp.bundle
 )
 
+# TODO: is there a better way?
+ln -s ../../../icons/Adwaita "$GIMP_APP_SHR_DIR"/gimp/*/icons
+mv "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor/scalable \
+   "$GIMP_APP_SHR_DIR"/icons/hicolor
+rm -rf "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor
+ln -s ../../../icons/hicolor "$GIMP_APP_SHR_DIR"/gimp/*/icons
+
+#------------------------------------------------------------- modify Info.plist
+
 /usr/libexec/PlistBuddy \
   -c "Set CFBundleShortVersionString '$(gimp_get_version)'" \
   "$GIMP_APP_CON_DIR"/Info.plist
@@ -52,9 +61,26 @@ fi
   -c "Set CFBundleVersion '1'" \
   "$GIMP_APP_CON_DIR"/Info.plist
 
-# TODO: is there a better way?
-ln -s ../../../icons/Adwaita "$GIMP_APP_SHR_DIR"/gimp/*/icons
-mv "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor/scalable \
-   "$GIMP_APP_SHR_DIR"/icons/hicolor
-rm -rf "$GIMP_APP_SHR_DIR"/gimp/*/icons/hicolor
-ln -s ../../../icons/hicolor "$GIMP_APP_SHR_DIR"/gimp/*/icons
+#------------------------------------------------------- add Python and packages
+
+# Install externally built Python framework.
+gimp_install_python
+
+# Add rpath to find libraries.
+lib_add_rpath @executable_path/../../../../../Resources/lib \
+  "$GIMP_APP_FRA_DIR"/Python.framework/Versions/Current/bin/\
+python"$GIMP_PYTHON_VER"
+lib_add_rpath @executable_path/../../../../../../../../Resources/lib \
+  "$GIMP_APP_FRA_DIR"/Python.framework/Versions/Current/Resources/\
+Python.app/Contents/MacOS/Python
+
+# Exteract the externally built wheels if present. Wheels in TMP_DIR
+# will take precedence over the ones in PKG_DIR.
+if [ -f "$PKG_DIR"/wheels.tar.xz ]; then
+  tar -C "$TMP_DIR" -xf "$PKG_DIR"/wheels.tar.xz
+else
+  echo_w "not using externally built wheels"
+fi
+
+# Install wheels.
+#gimp_pipinstall_pygobject

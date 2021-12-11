@@ -81,6 +81,8 @@
         file="gimp-2.99.8-gsettings.patch" strip="1"/>
       <patch
         file="gimp_settings_dir.patch" strip="1"/>
+      <patch
+        file="gimp_bin_dir.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gimp-common-deps"/>

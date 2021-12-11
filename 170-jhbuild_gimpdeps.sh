@@ -36,3 +36,13 @@ fi
 #------------------------------------------------------- build GIMP dependencies
 
 jhbuild build gimp-common-deps
+
+#------------------------------------------------- run time dependencies: Python
+
+# Download custom Python runtime.
+
+gimp_download_python
+
+# Build Python wheels and save them to our package cache.
+
+gimp_build_wheels

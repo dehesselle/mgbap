@@ -1,0 +1,46 @@
+diff --git a/app/main.c b/app/main.c
+index ff8d684f72..3c8e420ce0 100644
+--- a/app/main.c
++++ b/app/main.c
+@@ -332,13 +332,18 @@ gimp_macos_setenv (const char * progname)
+       gchar *tmp;
+       gchar *app_dir;
+       gchar *res_dir;
++      gchar *bin_dir;
+       size_t path_len;
+       struct stat sb;
+ 
+       app_dir = g_path_get_dirname (resolved_path);
+       tmp = g_strdup_printf ("%s/../Resources", app_dir);
++      g_free (app_dir);
+       res_dir = g_canonicalize_filename (tmp, NULL);
+       g_free (tmp);
++      tmp = g_strdup_printf ("%s/bin", res_dir);
++      bin_dir = g_canonicalize_filename (tmp, NULL);
++      g_free (tmp);
+       if (res_dir && !stat (res_dir, &sb) && S_ISDIR (sb.st_mode))
+         {
+           g_print ("GIMP is started as MacOS application\n");
+@@ -349,7 +354,7 @@ gimp_macos_setenv (const char * progname)
+           return;
+         }
+ 
+-      path_len = strlen (g_getenv ("PATH") ? g_getenv ("PATH") : "") + strlen (app_dir) + 2;
++      path_len = strlen (g_getenv ("PATH") ? g_getenv ("PATH") : "") + strlen (bin_dir) + 2;
+       path = g_try_malloc (path_len);
+       if (path == NULL)
+         {
+@@ -357,10 +362,10 @@ gimp_macos_setenv (const char * progname)
+           app_exit (EXIT_FAILURE);
+         }
+       if (g_getenv ("PATH"))
+-        g_snprintf (path, path_len, "%s:%s", app_dir, g_getenv ("PATH"));
++        g_snprintf (path, path_len, "%s:%s", bin_dir, g_getenv ("PATH"));
+       else
+-        g_snprintf (path, path_len, "%s", app_dir);
+-      g_free (app_dir);
++        g_snprintf (path, path_len, "%s", bin_dir);
++      g_free (bin_dir);
+       g_setenv ("PATH", path, TRUE);
+       g_free (path);
+       tmp = g_strdup_printf ("%s/lib/gtk-3.0/3.0.0", res_dir);
