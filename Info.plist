@@ -843,7 +843,7 @@
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>NSRequiresAquaSystemAppearance</key>
-    <true/>
+    <false/>
     <key>UTExportedTypeDeclarations</key>
     <array>
       <dict>
