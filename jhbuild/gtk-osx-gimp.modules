@@ -57,7 +57,7 @@
       <dep package="libwebp"/>
       <dep package="shared-mime-info"/>
       <dep package="iso-codes"/>
-      <dep package="librsvg-24"/>
+      <dep package="librsvg"/>
       <dep package="gexiv2"/>
       <dep package="libwmf"/>
       <dep package="openexr"/>
@@ -122,7 +122,7 @@
       <dep package="suitesparse"/>
       <dep package="openexr"/>
       <dep package="libwebp"/>
-      <dep package="librsvg-24"/>
+      <dep package="librsvg"/>
     </after>
     <dependencies>
       <dep package="babl"/>
