@@ -142,8 +142,8 @@ jobs:
     - name: create GIMP.app
       run: ./220-gimp_package.sh
 
-    #- name: create GIMP.dmg
-    #  run: ./230-gimp_distrib.sh
+    - name: create GIMP.dmg
+      run: ./230-gimp_distrib.sh
 
     #---------------------------------------------------------- upload artifacts
 
@@ -163,8 +163,8 @@ jobs:
         name: GIMP_build_toolset.sha256
         path: ${{ github.workspace }}/mgbap_v${{ steps.toolset.outputs.version }}.dmg.sha256
 
-    #- name: upload GIMP disk image
-    #  uses: actions/upload-artifact@v2
-    #  with:
-    #    name: GIMP_dmg
-    #    path: ${{ github.workspace }}/GIMP.dmg
+    - name: upload GIMP disk image
+      uses: actions/upload-artifact@v2
+      with:
+        name: GIMP_dmg
+        path: ${{ github.workspace }}/GIMP.dmg

@@ -39,10 +39,10 @@ jhbuild-$JHBUILD_VER.tar.bz2
 # with the Python runtime that gets build when building all our libraries
 # later.
 JHBUILD_PYTHON_VER_MAJOR=3
-JHBUILD_PYTHON_VER_MINOR=9
+JHBUILD_PYTHON_VER_MINOR=8   # dmgbuild dependencies not compatible with 9
 JHBUILD_PYTHON_VER=$JHBUILD_PYTHON_VER_MAJOR.$JHBUILD_PYTHON_VER_MINOR
 JHBUILD_PYTHON_URL="https://gitlab.com/api/v4/projects/26780227/packages/generic/\
-python_macos/2/python_${JHBUILD_PYTHON_VER/./}_$(uname -p).tar.xz"
+python_macos/4/python_${JHBUILD_PYTHON_VER/./}_$(uname -p).tar.xz"
 JHBUILD_PYTHON_DIR=$OPT_DIR/Python.framework/Versions/$JHBUILD_PYTHON_VER
 JHBUILD_PYTHON_BIN_DIR=$JHBUILD_PYTHON_DIR/bin
 
@@ -73,6 +73,10 @@ function jhbuild_install_python
 
   # Shadow the system's python binary as well.
   ln -s python$JHBUILD_PYTHON_VER_MAJOR "$BIN_DIR"/python
+
+  # create '.pth' file inside Framework to include our site-packages directory
+  echo "../../../../../../../lib/python$JHBUILD_PYTHON_VER/site-packages"\
+    > "$JHBUILD_PYTHON_DIR"/lib/python$JHBUILD_PYTHON_VER/site-packages/jhbuild.pth
 }
 
 function jhbuild_install

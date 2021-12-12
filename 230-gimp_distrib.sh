@@ -6,8 +6,7 @@
 
 ### description ################################################################
 
-# Install tools that are not direct dependencies of GIMP but required for
-# e.g. packaging.
+# Create a disk image for distribution.
 
 ### shellcheck #################################################################
 
@@ -30,18 +29,16 @@ done
 
 ### main #######################################################################
 
-if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
-  error_trace_enable
-fi
+error_trace_enable
 
-#---------------------------------------------------- install disk image creator
+# Create background for development snapshots. This is not meant for
+# official releases, those will be repackaged eventually (they also need
+# to be signed and notarized).
+LD_LIBRARY_PATH=$LIB_DIR convert -size 560x400 xc:transparent \
+  -font Andale-Mono -pointsize 64 -fill black \
+  -draw "text 20,60 'GIMP $(gimp_get_version)'" \
+  -draw "text 20,120 '*unofficial*'" \
+  "$SRC_DIR"/gimp_dmg.png
 
-dmgbuild_install
-
-#----------------------------------------------------- create application bundle
-
-jhbuild build gtkmacbundler
-
-#------------------------------------------------------------ image manipulation
-
-jhbuild build imagemagick
+# Create the disk image.
+dmgbuild_run "$ARTIFACT_DIR"/GIMP.dmg
