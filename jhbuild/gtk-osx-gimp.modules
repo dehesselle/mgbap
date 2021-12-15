@@ -74,16 +74,12 @@
     autogen-sh="autogen.sh"
     autogenargs="--without-x --with-build-id=dehesselle.GIMP">
     <branch
-      module="gimp/v2.99/gimp-2.99.8.tar.bz2"
-      version="2.99.8"
-      hash="sha256:dd916bd3474ef2efc652a0510280977ab8ea95e3d95d918394b0662261c32aae"
+      module="https://gitlab.gnome.org/GNOME/gimp/-/archive/e9ef4b797d/gimp-e9ef4b797d.tar.bz2"
+      version="2.99.8.e9ef4b797d"
+      hash="sha256:308a28afc8c021ce74b6b4f1b9f13439663ad48b1dee4e6e5e3a16ad656c6c9d"
       repo="ftp.gimp.org">
       <patch
-        file="gimp-2.99.8-gsettings.patch" strip="1"/>
-      <patch
-        file="gimp_settings_dir.patch" strip="1"/>
-      <patch
-        file="gimp_bin_dir.patch" strip="1"/>
+        file="gimp_mgbap.patch" strip="1"/>
     </branch>
     <dependencies>
       <dep package="gimp-common-deps"/>

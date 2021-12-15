@@ -123,7 +123,7 @@ function gimp_install_python
   mkdir -p "$GIMP_APP_BIN_DIR"
   # shellcheck disable=SC2086 # it's an integer
   ln -sf ../../Frameworks/Python.framework/Versions/Current/bin/\
-python$GIMP_PYTHON_VER_MAJOR "$GIMP_APP_BIN_DIR"
+python$GIMP_PYTHON_VER "$GIMP_APP_BIN_DIR"
 
   # create '.pth' file inside Framework to include our site-packages directory
   # shellcheck disable=SC2086 # it's an integer

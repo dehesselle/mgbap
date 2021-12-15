@@ -36,8 +36,9 @@ error_trace_enable
 # to be signed and notarized).
 LD_LIBRARY_PATH=$LIB_DIR convert -size 560x400 xc:transparent \
   -font Andale-Mono -pointsize 64 -fill black \
-  -draw "text 20,60 'GIMP $(gimp_get_version)'" \
-  -draw "text 20,120 '*unofficial*'" \
+  -draw "text 20,60 'GIMP'" \
+  -draw "text 20,120 '$(gimp_get_version)'" \
+  -draw "text 20,180 '*unofficial*'" \
   "$SRC_DIR"/gimp_dmg.png
 
 # Create the disk image.

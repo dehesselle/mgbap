@@ -65,113 +65,118 @@
 
   <!-- Name of main gimp binary -->
   <main-binary>${prefix}/bin/gimp-2.99</main-binary>
-  <!-- Copy in gimp plugins -->
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-jp2-load</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/align-layers</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/animation-optimize</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/animation-play</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/blinds</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/border-average</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/busy-dialog</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/checkerboard</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/cml-explorer</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/colormap-remap</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/compose</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/contrast-retinex</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/crop-zealous</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/curve-bend</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/decompose</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/depth-merge</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/despeckle</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/destripe</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-aa</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-bmp</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-cel</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-compressor</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-csource</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-darktable</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-dds</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-desktop-link</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-dicom</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-exr</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-faxg3</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-fits</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-fli</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gbr</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gegl</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gif-load</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gif-save</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gih</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-glob</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-header</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-heif</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-html-table</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-ico</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-jp2-load</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-jpeg</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-mng</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pat</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pcx</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pdf-load</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pdf-save</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pix</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-png</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pnm</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-ps</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-psd</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-psp</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-raw-data</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-raw-placeholder</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-rawtherapee</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-sgi</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-sunras</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-svg</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-tga</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-tiff</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-webp</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-wmf</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-xbm</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-xwd</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/film</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/flame</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/fractal-explorer</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/gfig</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/gimpressionist</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/gradient-flare</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/gradient-map</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/grid</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/guillotine</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/help</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/hot</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/ifs-compose</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/imagemap</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/jigsaw</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/lighting</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/mail</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/map-object</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/metadata-editor</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/metadata-viewer</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/nl-filter</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/pagecurl</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/plugin-browser</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/print</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/procedure-browser</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/qbist</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/sample-colorize</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/screenshot</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/script-fu</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/selection-to-path</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/smooth-palette</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/sparkle</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/sphere-designer</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/tile</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/tile-small</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/unit-editor</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/van-gogh-lic</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/warp</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/wavelet-decompose</binary>
-  <binary>${prefix}/lib/gimp/2.99/plug-ins/web-browser</binary>
-  
+  <!-- copy GMIP plugins
+
+    Right now we cannot use <binary> to handle the binary plugins as the library
+    link paths do not get adjusted correctly. So it's easier to treat them as
+    <data>. Still, we're keeping binary and Python plugins separately here.
+  -->
+  <!-- binary plugins -->
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/align-layers/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/animation-optimize/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/animation-play/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/blinds/blinds/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/border-average/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/busy-dialog/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/checkerboard/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/cml-explorer/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/colormap-remap/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/compose/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/contrast-retinex/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/crop-zealous/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/curve-bend/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/decompose/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/depth-merge/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/despeckle/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/destripe/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-aa/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-bmp/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-cel/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-compressor/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-csource/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-darktable/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-dds/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-desktop-link/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-dicom/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-exr/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-faxg3/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-fits/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-fli/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gbr/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gegl/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gif-load/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gif-save/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-gih/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-glob/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-header/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-heif/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-html-table/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-ico/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-jp2-load/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-jpeg/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-mng/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pat/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pcx/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pdf-load/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pdf-save/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pix/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-png/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-pnm/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-ps/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-psd/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-psp/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-raw-data/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-raw-placeholder/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-rawtherapee/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-sgi/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-sunras/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-svg/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-tga/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-tiff/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-webp/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-wmf/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-xbm/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/file-xwd/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/film/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/flame/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/fractal-explorer/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/gfig/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/gimpressionist/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/gradient-flare/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/gradient-map/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/grid/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/guillotine/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/help/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/hot/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/ifs-compose/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/imagemap/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/jigsaw/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/lighting/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/mail/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/map-object/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/metadata-editor/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/metadata-viewer/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/nl-filter/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/pagecurl/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/plugin-browser/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/print/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/procedure-browser/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/qbist/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/sample-colorize/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/screenshot/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/script-fu/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/selection-to-path/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/smooth-palette/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/sparkle/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/sphere-designer/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/tile/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/tile-small/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/unit-editor/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/van-gogh-lic/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/warp/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/wavelet-decompose/*</binary>
+  <binary>${prefix}/lib/gimp/2.99/plug-ins/web-browser/*</binary>
+  <!-- Python plugins -->
   <data>${prefix}/lib/gimp/2.99/plug-ins/colorxhtml</data>
   <data>${prefix}/lib/gimp/2.99/plug-ins/file-openraster</data>
   <data>${prefix}/lib/gimp/2.99/plug-ins/foggify</data>
@@ -184,7 +189,8 @@
   <data>${prefix}/lib/gimp/2.99/plug-ins/python-eval</data>
   <data>${prefix}/lib/gimp/2.99/plug-ins/spyro-plus</data>
 
-  
+  <binary>${prefix}/lib/libgimp-3.0.0.dylib</binary>
+  <binary>${prefix}/lib/libgimpui-3.0.0.dylib</binary>
   <!-- <binary recurse="True">${prefix}/lib/gimp/2.99/plug-ins/*</binary> -->
   <!-- Copy in gimp modules -->
   <binary>${prefix}/lib/gimp/2.99/modules</binary>
@@ -201,9 +207,9 @@
   <!-- Copy in GTK+ themeing engines - Don't appear to exist in gtk 3 -->
   <!-- <binary>${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/engines/*.so</binary> -->
   <!-- Copy in GTK+ printer backends -->
-  <binary>${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/printbackends/*.so</binary>
+  <binary>${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/printbackends</binary>
   <!-- Copy in GTK+ immodules -->
-  <binary>${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/immodules/*.so</binary>
+  <binary>${prefix}/lib/${gtkdir}/${pkg:${gtk}:gtk_binary_version}/immodules</binary>
   <!-- Starting with 2.24, gdk-pixbuf installs into its own directory. -->
   <binary>${prefix}/lib/gdk-pixbuf-2.0/${pkg:gdk-pixbuf-2.0:gdk_pixbuf_binary_version}/loaders</binary>
   <binary dest="${bundle}/Contents/MacOS">${prefix}/bin/gdk-pixbuf-query-loaders</binary>
@@ -211,15 +217,36 @@
   <translations name="gtk30">
     ${prefix}/share/locale
   </translations>
+  <translations name="gtk30-properties">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gtk-mac-integration">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gimp30">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gimp30-libgimp">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gimp30-python">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gimp30-script-fu">
+    ${prefix}/share/locale
+  </translations>
+  <translations name="gimp30-std-plug-ins">
+    ${prefix}/share/locale
+  </translations>
   <!-- GTK+3 data -->
-  <data>${prefix}/etc/gtk-3.0/*</data>
+  <data>${prefix}/etc/gtk-3.0</data>
   <!-- Fontconfig data; requires clean up -->
   <data>
     ${prefix}/etc/fonts
   </data>
   <!-- Gimp data -->
-  <data>${prefix}/etc/gimp/2.99/*</data>
-  <data dest="${bundle}/Contents/Resources/share/gimp">${prefix}/share/gimp</data>
+  <data>${prefix}/etc/gimp/2.99</data>
+  <data>${prefix}/share/gimp</data>
   <!-- brushes -->
   <data>${prefix}/share/mypaint-data</data>
   <!-- Pango data -->
@@ -227,7 +254,6 @@
   <!-- XML data -->
   <data>${prefix}/share/xml/catalog</data>
   <!-- locale (TODO: trim) -->
-  <data>${prefix}/share/locale</data>
   <data>${prefix}/lib/charset.alias</data>
   <!-- Theme data-->
   <data>${prefix}/share/themes</data>
@@ -239,7 +265,10 @@
   <data>
     ${prefix}/share/glib-2.0/schemas
   </data>
-  <!-- gi repository typlibs -->
+  <!-- GObject Introspection -->
+  <binary>
+    ${prefix}/lib/libgirepository-1.0.1.dylib
+  </binary>
   <gir>
     ${prefix}/share/gir-1.0/*.gir
   </gir>
